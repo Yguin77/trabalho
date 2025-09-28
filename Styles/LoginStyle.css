@@ -1,0 +1,199 @@
+:root {
+    /* Cores */
+    --primary-color: #0866f3;
+    --secondary-color: #1f7dd4;
+    --accent-color: #667eea;
+    --background-gradient: linear-gradient(135deg, #369feb 0%, #010e18 100%);
+    --button-gradient: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    --header-background: rgb(253, 250, 250);
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --text-color-nav: #111944;
+    --border-color: #e1e8ed;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Tipografia */
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Outros */
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--header-background);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-color-nav);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+    display: none; 
+}
+
+/* Estilos específicos da página de Login */
+.login-section {
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--text-color-dark);
+}
+
+.section-title {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: var(--text-color-light);
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: var(--text-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.login-button {
+    width: 100%;
+    background: var(--button-gradient);
+    color: var(--text-color-light);
+    padding: 0.8rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--text-color-nav);
+        margin: 3px 0;
+        transition: var(--transition-speed);
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 15px; 
+    cursor: pointer;
+    user-select: none; 
+    color: #555;
+}

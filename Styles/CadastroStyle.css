@@ -1,0 +1,53 @@
+:root {
+    /* Cores */
+    --primary-color: #0866f3;
+    --accent-color: #667eea;
+    --background-gradient: linear-gradient(135deg, #369feb 0%, #010e18 100%);
+    --button-gradient: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    --header-background: rgb(253, 250, 250);
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --text-color-nav: #111944;
+    --border-color: #e1e8ed;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; padding-top: 100px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header e Footer (mesmo estilo das outras páginas) */
+header { background: var(--header-background); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.logo-link { display: flex; align-items: center; }
+.nav-menu { display: flex; list-style: none; gap: 2rem; }
+.nav-menu a { color: var(--text-color-nav); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease; }
+.nav-menu a:hover { background: rgba(0, 0, 0, 0.1); }
+footer { background: rgba(0, 0, 0, 0.2); color: var(--text-color-light); text-align: center; padding: 2rem 0; margin-top: 3rem; }
+
+/* Estilos específicos do Formulário */
+.form-section { padding: 2rem 0; text-align: center; }
+.section-title { margin-bottom: 2rem; font-size: 2.2rem; color: var(--text-color-light); }
+.auth-form { max-width: 450px; margin: 0 auto; padding: 2.5rem; background: #fff; border-radius: 8px; box-shadow: 0 5px 25px var(--shadow-color); }
+.form-group { margin-bottom: 1.5rem; text-align: left; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.form-group input, .form-group select { width: 100%; padding: 0.8rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease; }
+.form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent-color); }
+.auth-button { width: 100%; background: var(--button-gradient); color: var(--text-color-light); padding: 0.8rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.auth-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+.auth-link { color: #fff; margin-top: 1.5rem; }
+.auth-link a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
+
+/* Notificação */
+.notification { position: fixed; top: 100px; right: 20px; background: #4CAF50; color: #fff; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transform: translateX(400px); transition: transform 0.3s ease; z-index: 1001; }
+.notification.show { transform: translateX(0); }
+.notification.error { background: #e74c3c; }

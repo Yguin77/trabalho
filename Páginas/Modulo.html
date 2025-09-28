@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos - SGRH</title>
+    <link rel="stylesheet" href="../Styles/ModuloStyle.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Logo SGRH" width="220" height="55">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="./Modulo.html">Módulos</a></li>
+                <li><a href="./Login.html">Login</a></li>
+                <li><a href="./Sobre.html">Sobre</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="modules" class="modules-section">
+            <div class="container">
+                <h2 class="section-title">Módulos do Sistema</h2>
+                <div class="modules-grid">
+                    <button type="button" class="module-card" onclick="showModuleDetails('colaboradores')">
+                        <span class="module-icon">👥</span>
+                        <h3>Gestão de Colaboradores</h3>
+                        <p>Gerencie todas as informações dos seus colaboradores de forma centralizada.</p>
+                        <ul class="module-features">
+                            <li>Cadastro completo de funcionários</li>
+                            <li>Consulta de informações pessoais</li>
+                            <li>Controle de cargos e setores</li>
+                            <li>Gestão de documentos</li>
+                        </ul>
+                    </button>
+
+                    <button type="button" class="module-card" onclick="showModuleDetails('folha')">
+                        <span class="module-icon">💰</span>
+                        <h3>Folha de Pagamento</h3>
+                        <p>Automatize os cálculos de salários, benefícios e descontos.</p>
+                        <ul class="module-features">
+                            <li>Cálculo automático de salários</li>
+                            <li>Geração de contracheques PDF</li>
+                            <li>Relatórios financeiros</li>
+                            <li>Controle de benefícios</li>
+                        </ul>
+                    </button>
+
+                    <button type="button" class="module-card" onclick="showModuleDetails('avaliacao')">
+                        <span class="module-icon">📊</span>
+                        <h3>Avaliações de Desempenho</h3>
+                        <p>Acompanhe e avalie o desempenho dos colaboradores.</p>
+                        <ul class="module-features">
+                            <li>Formulários de avaliação</li>
+                            <li>Registro de feedbacks</li>
+                            <li>Relatórios individuais e por equipe</li>
+                            <li>Métricas de desempenho</li>
+                        </ul>
+                    </button>
+
+                    <button type="button" class="module-card" onclick="showModuleDetails('treinamento')">
+                        <span class="module-icon">🎓</span>
+                        <h3>Gestão de Treinamentos</h3>
+                        <p>Organize e acompanhe os treinamentos dos colaboradores.</p>
+                        <ul class="module-features">
+                            <li>Cadastro de cursos</li>
+                            <li>Controle de participação</li>
+                            <li>Certificados digitais</li>
+                            <li>Relatórios de capacitação</li>
+                        </ul>
+                    </button>
+
+                    <button type="button" class="module-card" onclick="showModuleDetails('acesso')">
+                        <span class="module-icon">🔐</span>
+                        <h3>Gestão de Acessos</h3>
+                        <p>Controle seguro de usuários e permissões do sistema.</p>
+                        <ul class="module-features">
+                            <li>Login seguro</li>
+                            <li>Níveis de permissão</li>
+                            <li>Controle de acesso</li>
+                            <li>Auditoria de segurança</li>
+                        </ul>
+                    </button>
+
+                    <button type="button" class="module-card" onclick="showModuleDetails('relatorios')">
+                        <span class="module-icon">📈</span>
+                        <h3>Relatórios e Dashboards</h3>
+                        <p>Visualize indicadores e métricas importantes do RH.</p>
+                        <ul class="module-features">
+                            <li>Dashboard interativo</li>
+                            <li>Indicadores de turnover</li>
+                            <li>Métricas de absenteísmo</li>
+                            <li>Relatórios personalizados</li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SGRH. Desenvolvido com tecnologia de ponta para otimizar a gestão de pessoas.</p>
+        </div>
+    </footer>
+</body>
+</html>

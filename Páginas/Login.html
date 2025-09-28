@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SGRH</title>
+    <link rel="stylesheet" href="../Styles/LoginStyle.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Logo SGRH" width="220" height="55">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="Modulo.html">Módulos</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <h2 class="section-title">Acesso ao Sistema</h2>
+                <form class="login-form" id="loginForm" method="post">
+                    <div class="form-group">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required>
+                            <span class="password-toggle-icon" id="togglePassword">👁️</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userType">Tipo de Usuário:</label>
+                        <select id="userType" name="userType" required>
+                            <option value="">Selecione...</option>
+                            <option value="admin">Administrador</option>
+                            <option value="rh">RH</option>
+                            <option value="colaborador">Colaborador</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="login-button">Entrar</button>
+                    <p class="auth-link">Não tem uma conta? <a href="Cadastro.html">Cadastre-se</a></p>
+                </form>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SGRH. Desenvolvido com tecnologia de ponta para otimizar a gestão de pessoas.</p>
+        </div>
+    </footer>
+    <div id="notification" class="notification"></div>
+    <script src="../main.js"></script>
+</body>
+</html>

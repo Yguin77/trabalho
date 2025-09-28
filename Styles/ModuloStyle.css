@@ -1,0 +1,205 @@
+:root {
+    /* Cores */
+    --primary-color: #1263db;
+    --secondary-color: #1f7dd4;
+    --accent-color: #1d42e7;
+    --success-color: #4CAF50;
+    --background-gradient: linear-gradient(135deg, #369feb 0%, #010e18 100%);
+    --header-background: rgb(253, 250, 250);
+    --card-background: #fff;
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --text-color-light: #fff;
+    --text-color-nav: #111944;
+    --shadow-color-light: rgba(0, 0, 0, 0.1);
+    --shadow-color-dark: rgba(0, 0, 0, 0.2);
+
+    /* Tipografia */
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Outros */
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--header-background);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-color-nav);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hamburger { display: none; }
+
+/* Estilos específicos da página de Módulos */
+.modules-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color-light);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    display: block;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.module-card {
+    /* Reset de estilos de botão */
+    background: var(--card-background);
+    border: none;
+    padding: 2rem;
+    font-family: var(--font-family-main);
+    text-align: left;
+    
+    /* Estilos originais */
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px var(--shadow-color-light);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+.module-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px var(--shadow-color-dark);
+}
+
+.module-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.module-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-dark);
+}
+
+.module-card p {
+    color: var(--text-color-medium);
+    margin-bottom: 1rem;
+}
+
+.module-features {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 0;
+}
+
+.module-features li {
+    padding: 0.3rem 0;
+    color: var(--text-color-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.module-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}

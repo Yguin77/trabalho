@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - SGRH</title>
+    <link rel="stylesheet" href="../Styles/CadastroStyle.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Logo SGRH" width="220" height="55">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="Modulo.html">Módulos</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <h2 class="section-title">Crie sua Conta</h2>
+                <form class="auth-form" id="registrationForm">
+                    <div class="form-group">
+                        <label for="regName">Nome Completo:</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regUsername">Nome de Usuário:</label>
+                        <input type="text" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Senha:</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirme a Senha:</label>
+                        <input type="password" id="regConfirmPassword" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="regUserType">Tipo de Usuário:</label>
+                        <div class="form-group">
+                        <select id="regUserType" required>
+                            <option value="">Selecione...</option> 
+                            <option value="colaborador">Colaborador</option>
+                            <option value="rh">RH</option>
+                            <option value="admin">Administrador</option> 
+                        </select>
+</div>
+                    </div>
+                    <button type="submit" class="auth-button">Cadastrar</button>
+                </form>
+                <p class="auth-link">Já tem uma conta? <a href="Login.html">Faça o login</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SGRH. Desenvolvido com tecnologia de ponta para otimizar a gestão de pessoas.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário - SGRH</title>
+    <link rel="stylesheet" href="../Styles/PainelUsuerStyle.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="Logo SGRH" width="220" height="55">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="Modulo.html">Módulos</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <div class="user-info">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <div>
+                            <h3 id="userName">Usuário</h3>
+                            <p id="userRole">Cargo</p>
+                        </div>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Sair</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">247</div>
+                        <div class="stat-label">Colaboradores Ativos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Novos Contratados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">95%</div>
+                        <div class="stat-label">Taxa de Presença</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">8.5</div>
+                        <div class="stat-label">Avaliação Média</div>
+                    </div>
+                </div>
+
+                <div class="modules-grid">
+                    <button type="button" class="module-card" onclick="openModule('colaboradores')">
+                        <span class="module-icon">👥</span>
+                        <h3>Colaboradores</h3>
+                        <p>Gerencie informações dos funcionários</p>
+                    </button>
+                    <button type="button" class="module-card" onclick="openModule('folha')">
+                        <span class="module-icon">💰</span>
+                        <h3>Folha de Pagamento</h3>
+                        <p>Processe pagamentos e benefícios</p>
+                    </button>
+                    <button type="button" class="module-card" onclick="openModule('relatorios')">
+                        <span class="module-icon">📈</span>
+                        <h3>Relatórios</h3>
+                        <p>Visualize métricas e indicadores</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SGRH. Desenvolvido com tecnologia de ponta para otimizar a gestão de pessoas.</p>
+        </div>
+    </footer>
+    
+    <script src="../main.js"></script>
+</body>
+</html>
